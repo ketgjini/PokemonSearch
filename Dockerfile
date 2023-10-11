@@ -9,6 +9,6 @@ EXPOSE 8080
 
 RUN mkdir /app
 
-COPY --from=build /home/gradle/src/build/libs/*.jar /app/SqlPractice-0.0.1-SNAPSHOT.jar
+COPY --from=build /home/gradle/src/build/libs/*.jar /app/pokemon-search-0.0.1-SNAPSHOT.jar
 
 ENTRYPOINT ["java", "-Dspring.profiles.active=dev", "-jar", "app/pokemon-search-0.0.1-SNAPSHOT.jar"]
