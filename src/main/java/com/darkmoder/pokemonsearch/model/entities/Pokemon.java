@@ -1,4 +1,4 @@
-package com.darkmoder.pokemonsearch.model;
+package com.darkmoder.pokemonsearch.model.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 
 @Table(name = "pokemon_data")
 @Entity
-public class PokemonModel {
+public class Pokemon {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,9 +17,9 @@ public class PokemonModel {
     private int height;
     private int weight;
 
-    public PokemonModel() { }
+    public Pokemon() { }
 
-    public PokemonModel(final Long id, final String name, final int height, final int weight) {
+    public Pokemon(final Long id, final String name, final int height, final int weight) {
         this.id = id;
         this.name = name;
         this.height = height;
