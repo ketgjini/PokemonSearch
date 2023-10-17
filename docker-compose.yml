@@ -26,11 +26,14 @@ services:
       MYSQL_DATABASE: pokemondb
     ports:
       - "3308:3306"
+    volumes:
+    - mysql-data:/var/lib/mysql
     networks:
       - pokemonapp-net
 
 volumes:
   mysql-data:
+    driver: local
 
 networks:
   pokemonapp-net:
