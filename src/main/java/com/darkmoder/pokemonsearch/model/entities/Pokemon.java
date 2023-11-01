@@ -19,8 +19,7 @@ public class Pokemon {
 
     public Pokemon() { }
 
-    public Pokemon(final Long id, final String name, final int height, final int weight) {
-        this.id = id;
+    public Pokemon(final String name, final int height, final int weight) {
         this.name = name;
         this.height = height;
         this.weight = weight;
